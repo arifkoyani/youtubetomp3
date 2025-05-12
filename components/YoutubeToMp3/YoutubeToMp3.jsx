@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { Spotlight } from "../../components/ui/spotlight-new";
 import { PlaceholdersAndVanishInput } from "../../components/ui/placeholders-and-vanish-input";
 
 const YoutubeToMp3 = () => {
@@ -79,7 +80,9 @@ const YoutubeToMp3 = () => {
   };
 
   return (
-    <div className="flex justify-center min-h-screen p-4 sm:p-20 gap-8 font-sans">
+    <div className="relative overflow-hidden flex justify-center  p-4 sm:p-20 gap-8 font-sans">
+      <Spotlight />
+
       <div className="w-full max-w-2xl text-center">
         <div className="flex flex-col justify-center items-center mb-6">
           <h2 className="w-full truncate whitespace-nowrap overflow-hidden text-ellipsis mb-0 sm:mb-5 text-xl text-center sm:text-4xl dark:text-white text-black">
@@ -104,7 +107,7 @@ const YoutubeToMp3 = () => {
           </button>
           <h5 className="text-red-400 text-[12px]">
             {" "}
-            {error && "Please Enter Full Url"}
+            {error && "Enter Full & Valid Url"}
           </h5>
         </div>
 
