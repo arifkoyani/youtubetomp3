@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { Spotlight } from "../../components/ui/spotlight-new";
+// import { Spotlight } from "../../components/ui/spotlight-new";
 import { PlaceholdersAndVanishInput } from "../../components/ui/placeholders-and-vanish-input";
-import Navbar from "../navbar/Navbar";
+// import Navbar from "../navbar/Navbar";
 
 const YoutubeToMp3 = () => {
   const [url, setUrl] = useState("");
@@ -81,10 +81,10 @@ const YoutubeToMp3 = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="relative overflow-hidden flex justify-center  p-4 sm:p-20 gap-8 font-sans">
-        <Spotlight />
+        {/* <Spotlight /> */}
 
         <div className="w-full max-w-2xl text-center">
           <div className="flex flex-col justify-center items-center mb-6">
