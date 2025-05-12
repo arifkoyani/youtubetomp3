@@ -45,6 +45,8 @@ const YoutubeToMp3 = () => {
     if (!videoId) {
       setError("Please Enter Full URL");
       return;
+    } else {
+      setError("");
     }
     setIsLoading(true);
 
@@ -61,7 +63,7 @@ const YoutubeToMp3 = () => {
         alert("Error: " + data.error);
         return;
       }
-
+      if (!data.final) return setError("Try again 🙋‍♂️");
       setDownloadLink(data.final);
       setTitle(data.song_title || "Download Ready");
       console.log("Download URL set:", data.final);
@@ -83,9 +85,8 @@ const YoutubeToMp3 = () => {
     <>
       <Navbar />
 
-      <div className="relative overflow-hidden flex justify-center  p-4 sm:p-20 gap-8 font-sans">
+      <div className="relative h-screen overflow-hidden flex justify-center p-2 sm:p-20 gap-8 font-sans">
         <Spotlight />
-
         <div className="w-full max-w-2xl text-center">
           <div className="flex flex-col justify-center items-center mb-6">
             <h2 className="w-full truncate whitespace-nowrap overflow-hidden text-ellipsis mb-0 sm:mb-5 text-xl text-center sm:text-4xl dark:text-white text-black">
@@ -104,7 +105,7 @@ const YoutubeToMp3 = () => {
             <button
               onClick={handleSubmit}
               disabled={isLoading || !url}
-              className="w-full max-w-[300px] shadow-4xl bg-[#e68e00] hover:bg-[#f8a217eb] text-white font-medium py-3 my-3 rounded-full px-6  transition-colors cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full max-w-[300px] shadow-6xs bg-[#e68e00] hover:bg-[#f8a217eb] text-black font-medium py-3 my-3 rounded-full px-6  transition-colors cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {isLoading ? "Processing..." : "Convert to MP3"}
             </button>
