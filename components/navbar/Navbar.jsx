@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Navbar() {
   return (
-    <nav className="bg-transparent text-white px-6 py-4 shadow-md">
+    <nav className="bg-transparent text-white px-4 py-4 shadow-md">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <h1 className="hover:text-yellow-400 text-lg font-bold">
           YOUTUBE TO MP3
