@@ -3,7 +3,9 @@ export default function Navbar() {
   return (
     <nav className="bg-transparent text-white px-6 py-4 shadow-md">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <h1 className="text-lg font-bold">YouTube to MP3</h1>
+        <h1 className="hover:text-yellow-400 text-lg font-bold">
+          YOUTUBE TO MP3
+        </h1>
         <ul className="flex gap-6 text-sm font-medium">
           <li>
             <Link
