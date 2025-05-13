@@ -58,12 +58,14 @@ const YoutubeToMp3 = () => {
       });
 
       const data = await res.json();
-
       if (data.error) {
         alert("Error: " + data.error);
         return;
+      } else if (data.final == "") {
+        setError("Try again..... ");
+      } else {
+        console.log("Okay");
       }
-      if (!data.final) return setError("Try again 🙋‍♂️");
       setDownloadLink(data.final);
       setTitle(data.song_title || "Download Ready");
       console.log("Download URL set:", data.final);
