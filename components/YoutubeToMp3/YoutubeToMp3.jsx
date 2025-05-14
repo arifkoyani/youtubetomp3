@@ -87,7 +87,7 @@ const YoutubeToMp3 = () => {
     <>
       <Navbar />
 
-      <div className="relative h-[90%] overflow-hidden flex justify-center p-2 sm:p-20 gap-8 font-sans">
+      <div className="relative h-screen overflow-hidden flex justify-center p-2 sm:p-20 gap-8 font-sans">
         <Spotlight />
         <div className="w-full max-w-2xl text-center">
           <div className="flex flex-col justify-center items-center mb-6">
