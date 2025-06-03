@@ -95,7 +95,6 @@ const YoutubeToMp3 = () => {
               {title}
             </h2>
           </div>
-
           <div className="space-y-4">
             <PlaceholdersAndVanishInput
               placeholders={placeholders}
