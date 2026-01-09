@@ -16,7 +16,7 @@ export async function POST(req) {
       {
         method: "GET",
         headers: {
-          "x-rapidapi-key": process.env.API_KEY,
+          "x-rapidapi-key": "0e9e615599mshf7aea4361ab8c2bp1b0050jsn48392fad1da6",
           "x-rapidapi-host": "youtube-mp36.p.rapidapi.com",
         },
       }
